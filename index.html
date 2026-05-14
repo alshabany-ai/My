@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Hussein Mohib | Official Profile</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#070b14;
+color:white;
+overflow-x:hidden;
+}
+
+/* الخلفية */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#1d3557 0%,#070b14 45%),
+linear-gradient(to bottom,#070b14,#05070c);
+z-index:-2;
+}
+
+.glow{
+position:fixed;
+width:500px;
+height:500px;
+background:#00ffb3;
+filter:blur(160px);
+opacity:.15;
+border-radius:50%;
+top:-150px;
+right:-150px;
+z-index:-1;
+}
+
+/* الهيدر */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+position:relative;
+}
+
+.card{
+width:100%;
+max-width:1200px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:35px;
+padding:50px;
+box-shadow:0 0 40px rgba(0,0,0,.4);
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+overflow:hidden;
+}
+
+/* صورة الفنان */
+
+.profile-image{
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.profile-image img{
+width:100%;
+max-width:420px;
+border-radius:30px;
+object-fit:cover;
+border:4px solid rgba(255,255,255,.1);
+box-shadow:0 0 40px rgba(0,255,179,.25);
+}
+
+/* المعلومات */
+
+.info{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:rgba(0,255,179,.15);
+border:1px solid rgba(0,255,179,.3);
+border-radius:50px;
+font-size:14px;
+margin-bottom:20px;
+color:#00ffb3;
+width:max-content;
+}
+
+h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.subtitle{
+font-size:22px;
+color:#b7c4d4;
+margin-bottom:25px;
+}
+
+.desc{
+line-height:2;
+color:#d2d9e4;
+margin-bottom:35px;
+font-size:16px;
+}
+
+/* الازرار */
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.btn{
+padding:15px 28px;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+display:inline-flex;
+align-items:center;
+gap:10px;
+}
+
+.btn-primary{
+background:#00ffb3;
+color:#071018;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,255,179,.35);
+}
+
+.btn-secondary{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.1);
+color:white;
+}
+
+.btn-secondary:hover{
+background:rgba(255,255,255,.15);
+}
+
+/* الإحصائيات */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.stat{
+background:rgba(255,255,255,.04);
+padding:20px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.stat h2{
+font-size:28px;
+color:#00ffb3;
+margin-bottom:8px;
+}
+
+.stat p{
+font-size:14px;
+color:#b7c4d4;
+}
+
+/* قسم الأعمال */
+
+.section{
+padding:80px 30px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:40px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.work-card{
+background:rgba(255,255,255,.05);
+border-radius:25px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.work-card:hover{
+transform:translateY(-8px);
+}
+
+.work-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.work-content{
+padding:20px;
+}
+
+.work-content h3{
+margin-bottom:10px;
+}
+
+.work-content p{
+color:#b7c4d4;
+line-height:1.8;
+font-size:14px;
+}
+
+/* الفوتر */
+
+footer{
+padding:50px 20px;
+text-align:center;
+color:#8ea0b5;
+}
+
+/* الجوال */
+
+@media(max-width:900px){
+
+.card{
+grid-template-columns:1fr;
+padding:30px;
+}
+
+h1{
+font-size:42px;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="glow"></div>
+
+<!-- الصفحة الرئيسية -->
+
+<section class="hero">
+
+<div class="card">
+
+<div class="profile-image">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+
+<div class="info">
+
+<div class="badge">
+✔ فنان رسمي
+</div>
+
+<h1>حسين محب</h1>
+
+<div class="subtitle">
+فنان ومطرب يمني
+</div>
+
+<div class="desc">
+صوت يمني أصيل جمع بين الطرب الحديث والتراث اليمني، 
+واستطاع تكوين قاعدة جماهيرية واسعة عبر مختلف المنصات الرقمية.
+</div>
+
+<div class="buttons">
+
+<a href="#" class="btn btn-primary">
+🎵 استمع الآن
+</a>
+
+<a href="#" class="btn btn-secondary">
+📷 إنستقرام
+</a>
+
+<a href="#" class="btn btn-secondary">
+▶ يوتيوب
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h2>5M+</h2>
+<p>المشاهدات</p>
+</div>
+
+<div class="stat">
+<h2>850K</h2>
+<p>المتابعين</p>
+</div>
+
+<div class="stat">
+<h2>120+</h2>
+<p>الأعمال الفنية</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- الأعمال -->
+
+<section class="section">
+
+<h2 class="section-title">
+🎧 أشهر الأعمال
+</h2>
+
+<div class="grid">
+
+<div class="work-card">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+<div class="work-content">
+<h3>مرحب مرحب</h3>
+<p>
+واحدة من أشهر الأغاني الطربية التي حققت انتشارًا واسعًا.
+</p>
+</div>
+</div>
+
+<div class="work-card">
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+<div class="work-content">
+<h3>جلسات طربية</h3>
+<p>
+سلسلة جلسات فنية أعادت إحياء الأغاني اليمنية الكلاسيكية.
+</p>
+</div>
+</div>
+
+<div class="work-card">
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+<div class="work-content">
+<h3>حفلات جماهيرية</h3>
+<p>
+إحياء مهرجانات وحفلات ضخمة داخل وخارج اليمن.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- التواصل -->
+
+<section class="section">
+
+<h2 class="section-title">
+🌐 التواصل الاجتماعي
+</h2>
+
+<div class="grid">
+
+<div class="work-card">
+<div class="work-content">
+<h3>📷 Instagram</h3>
+<p>@husseinmohib</p>
+</div>
+</div>
+
+<div class="work-card">
+<div class="work-content">
+<h3>▶ YouTube</h3>
+<p>Hussein Mohib Official</p>
+</div>
+</div>
+
+<div class="work-card">
+<div class="work-content">
+<h3>🎵 TikTok</h3>
+<p>@husseinmohib</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Hussein Mohib — All Rights Reserved
+
+</footer>
+
+</body>
+</html>
